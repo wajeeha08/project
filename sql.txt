@@ -1,0 +1,68 @@
+CREATE TABLE Users
+( id INT AUTO_INCREMENT PRIMARY KEY, 
+username VARCHAR(50) NOT NULL, 
+password VARCHAR(255) NOT NULL ,
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP );
+
+
+CREATE TABLE Categories (
+    category_id INT AUTO_INCREMENT PRIMARY KEY,
+    category_name VARCHAR(50) NOT NULL
+);
+
+
+
+CREATE TABLE Artists (
+    artist_id INT AUTO_INCREMENT PRIMARY KEY,
+    artist_name VARCHAR(255) NOT NULL,
+    bio TEXT,
+    img VARCHAR(1500) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+
+
+
+
+-- Music Table CREATE TABLE music
+ ( music_id INT AUTO_INCREMENT PRIMARY KEY,
+ title VARCHAR(255) NOT NULL, 
+artist_id INT,
+ category_id INT, 
+description VARCHAR(255),
+ img_path VARCHAR(1050) NOT NULL,
+ audio_path VARCHAR(1050) NOT NULL, 
+added_by INT,
+ added_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+ CONSTRAINT fk_music_artist FOREIGN KEY (artist_id) REFERENCES Artists(artist_id), 
+CONSTRAINT fk_music_category FOREIGN KEY (category_id) REFERENCES Categories(category_id), 
+CONSTRAINT fk_music_user FOREIGN KEY (added_by) REFERENCES Users(id) -- Changed to reference the id column );
+
+
+
+CREATE TABLE video (
+    video_id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    artist_id INT,
+    category_id INT,
+    description VARCHAR(255),
+    thumbnail_path VARCHAR(1050) NOT NULL,
+    video_path VARCHAR(1050) NOT NULL,
+    added_by INT,
+    added_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT fk_video_artist FOREIGN KEY (artist_id) REFERENCES Artists(artist_id),
+    CONSTRAINT fk_video_category FOREIGN KEY (category_id) REFERENCES Categories(category_id),
+    CONSTRAINT fk_video_user FOREIGN KEY (added_by) REFERENCES Users(id) -- Corrected to reference the id column
+);
+onchange="displayBanner(this)"
+
+
+CREATE TABLE webusers
+( id INT AUTO_INCREMENT PRIMARY KEY, 
+first_name VARCHAR(50)  NOT NULL,
+last_name VARCHAR(50) NOT NULL,
+username VARCHAR(50) UNIQUE NOT NULL, 
+email VARCHAR(100) UNIQUE NOT NULL,
+password VARCHAR(255) NOT NULL ,
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP );
