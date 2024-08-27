@@ -1,0 +1,481 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+
+html,
+body {
+	height: 100%;
+	font-family: "Montserrat", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	background-color: #000;
+	color: white;
+	
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	color: lightyellow;
+	font-weight:600;
+	line-height: 1;
+}
+
+h1 {
+	font-size: 70px;
+	margin-top:40px;
+}
+
+h2 {
+	font-size: 36px;
+}
+
+h3 {
+	font-size: 30px;
+}
+
+h4 {
+	font-size: 24px;
+}
+
+h5 {
+	font-size: 18px;
+}
+
+h6 {
+	font-size: 16px;
+}
+
+p {
+	font-size: 15px;
+	color: white;
+	line-height: 1.8;
+	font-weight: 500;
+}
+
+img {
+	max-width: 100%;
+}
+
+input:focus,
+select:focus,
+button:focus,
+textarea:focus {
+	outline: none;
+}
+
+a:hover,
+a:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+ul, 
+ol {
+	padding: 0;
+	margin: 0;
+}
+
+/*---------------------
+Helper CSS
+ -----------------------*/
+
+.section-title {
+	margin-bottom: 60px;
+}
+
+.section-title h2 {
+	font-size: 60px;
+}
+
+.set-bg {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+}
+
+.spad {
+	padding-top: 105px;
+	padding-bottom: 105px;
+}
+
+.text-white h1,
+.text-white h2,
+.text-white h3,
+.text-white h4,
+.text-white h5,
+.text-white h6,
+.text-white p,
+.text-white span,
+.text-white li,
+.text-white a {
+	color: #fff;
+}
+
+
+
+.site-btn {
+	display: inline-block;
+	border: none;
+	font-size: 14px;
+	font-weight: 500;
+	min-width: 195px;
+	padding: 23px 20px;
+	border-radius: 50px;
+	text-transform: uppercase;
+	background: #fc0254;
+	color: #fff;
+	line-height: normal;
+	cursor: pointer;
+	text-align: center;
+}
+
+.site-btn:hover {
+	color: #fff;
+}
+
+.site-btn.sb-c2 {
+	background: #383b70;
+}
+
+
+/*------------------
+Header section
+ ---------------------*/
+
+ .header-section {
+	padding-left: 55px;
+	padding-right: 72px;
+	background: #08192d;
+  
+}
+
+.site-logo {
+	display: inline-block;
+	padding: 0;
+	height: 120px;
+	width: 120px;
+	
+}
+
+.header-right {
+	float: right;
+	padding: 44px 0;
+	margin-left: 130px;
+}
+
+.header-right .hr-btn {
+	display: inline-block;
+	color: #979aa5;
+}
+
+.header-right .user-panel {
+	display: inline-block;
+}
+
+.header-right .user-panel a {
+	font-size: 16px;
+	color: #ffffff;
+	margin: 0 10px;
+}
+
+.header-right .user-panel .register {
+	color: #fc0254;
+	margin-right: 0;
+}
+
+.header-right span {
+	color: #fff;
+	display: inline-block;
+	padding-left: 9px;
+}
+
+.main-menu {
+	list-style: none;
+	float: right;
+}
+
+.main-menu li {
+	display: inline-block;
+	position: relative;
+}
+
+.main-menu li a {
+	display: block;
+	font-size: 16px;
+	color: #ffffff;
+	padding: 44px 12px;
+	margin-left: 40px;
+  text-decoration: none;
+}
+
+.main-menu li a:hover {
+	color: #fc0254;
+}
+
+.main-menu li:first-child a {
+	margin-left: 0;
+}
+
+.main-menu li:hover .sub-menu {
+	visibility: visible;
+	opacity: 1;
+	margin-top: 0;
+}
+
+.main-menu .sub-menu {
+	position: absolute;
+	list-style: none;
+	width: 220px;
+	left: 60px;
+	top: 100%;
+	padding: 20px 0;
+	visibility: hidden;
+	opacity: 0;
+	margin-top: 50px;
+	background: #fff;
+	z-index: 99;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+	-webkit-box-shadow: 2px 7px 20px rgba(0, 0, 0, 0.05);
+	box-shadow: 2px 7px 20px rgba(0, 0, 0, 0.05);
+}
+
+.main-menu .sub-menu li {
+	display: block;
+}
+
+.main-menu .sub-menu li a {
+	display: block;
+	color: #000;
+	margin-left: 0;
+	padding: 5px 20px;
+}
+
+.main-menu .sub-menu li a:hover {
+	color: #fc0254;
+}
+
+.slicknav_menu {
+	display: none;
+}
+
+/* media query */
+/* Mobile menu styles */
+.slicknav_menu {
+    display: none;
+    background: #08192d;
+    padding: 10px;
+}
+
+.slicknav_menu .slicknav_btn {
+    display: block;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+}
+
+.slicknav_menu .slicknav_nav {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.slicknav_menu .slicknav_nav li {
+    display: block;
+    margin: 10px 0;
+}
+
+.slicknav_menu .slicknav_nav li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.slicknav_menu .slicknav_nav li a:hover {
+    background: #fc0254;
+}
+
+/* Media query for screens less than 712px */
+@media (max-width: 711px) {
+    .main-menu {
+        display: none;
+    }
+
+    .slicknav_menu {
+        display: block;
+    }
+}
+
+
+/* media query */
+
+
+
+
+/* footer start */
+footer{
+  width: 100%;
+  height: 60px;
+  background: #0a183d;
+}
+footer .copy
+{
+    text-align: center;
+  padding-top: 10px;
+  color: white;
+    
+}
+/* footer start */
+
+/* mucic page css start */
+
+/* form css start */
+
+/* Global Styles */
+
+ .container-fluid {
+ width: 900px;
+ 
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #00000046;
+  
+  box-shadow: 0 0 10px #fc0254;
+}
+
+
+/* .card-body {
+  padding: 20px;
+} */
+
+/* Form Styles */
+
+
+
+label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: left;
+  font-size: 20px;
+  color: white;
+  margin-top: 20px;
+} 
+input
+{
+  border:1px solid #08192d;
+  background-color: #0a183d;
+  color: white;
+}
+
+input[type="text"],
+input[type="file"],
+select,
+textarea {
+
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 1.5;
+} 
+
+input[type="text"]:focus,
+input[type="file"]:focus,
+select:focus,
+textarea:focus {
+  
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-file-input {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #08192d;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.custom-file-label {
+  width: 505px;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  color: black;
+}
+
+.custom-file-label:hover {
+  background-color: #f0f0f0;
+}
+
+#BannerViewer {
+ width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  background-color: #aeaeae;
+  margin-top: 20px;
+  
+}
+
+audio {
+  width: 100%;
+ margin-top: 20px;
+ 
+}
+.pl-4
+{
+  padding-top: 20px;
+  text-align: center;
+ 
+}
+
+button[type="submit"] {
+  
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #337ab7;
+  cursor: pointer;
+  margin-top: 15px;
+} 
+
+button[type="submit"]:hover {
+  background-color: #23527c;
+} 
+button[type="button"]
+{
+  padding: 16px 20px;
+}
+
+.rounded-0{
+  height:50px;
+}
+
+.addmusic
+{
+  align-items: center;
+
+}
+
+
+/* Responsive Styles */
+
+
+/* form css start */
+
+/* mucic page css start 
